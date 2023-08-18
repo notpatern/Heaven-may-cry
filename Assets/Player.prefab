@@ -105,7 +105,6 @@ MonoBehaviour:
   playerSlideHeight: 0.5
   currentPlayerHeight: 0
   Player: {fileID: 2095533648435507782}
-  playerGame: {fileID: 2095533648435507783}
   moveSpeed: 20
   jumpStrength: 17
   maxMoveSpeed: 15
