@@ -43,6 +43,7 @@ public class BaseMovement : MonoBehaviour
     bool jumping;
     bool slamming;
     float slamMultiplier;
+    float groundTime;
     bool slamPressed;
     Vector3 slideDirection;
 
@@ -101,6 +102,7 @@ public class BaseMovement : MonoBehaviour
         slamming = false;
         slamPressed = false;
         slamMultiplier = 1;
+        groundTime = 0;
     }
 
     void Update()
@@ -129,6 +131,16 @@ public class BaseMovement : MonoBehaviour
             slamMultiplier -= Time.deltaTime;
         }
         if (slamMultiplier < 1f) slamMultiplier = 1f;
+        if (grounded && slamMultiplier > 1f)
+        {
+            groundTime += Time.deltaTime;
+            if (groundTime > 0.25f)
+                slamMultiplier = 1f;
+        }
+        else
+        { groundTime = 0f; }
+        if (grounded && slamMultiplier == 1f)
+            groundTime = 0f;
     }
 
     private void StateMachine()
