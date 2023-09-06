@@ -42,8 +42,8 @@ public class Shoot : MonoBehaviour
         animator.SetTrigger("Fired");
         for (int i = 0; i < 10; i++)
         {
-            bulletAccuracyX = Random.Range(-0.5f, 0.5f);
-            bulletAccuracyY = Random.Range(-0.5f, 0.5f);
+            bulletAccuracyX = Random.Range(-0.35f, 0.35f);
+            bulletAccuracyY = Random.Range(-0.35f, 0.35f);
             inacVect = new Vector3(inacVect.x + bulletAccuracyX * i, inacVect.y + bulletAccuracyY * i, inacVect.z);
             GameObject shotB = Instantiate(bulletPrefab, spawPoint.position, Quaternion.Euler(inacVect));
             shotB.GetComponent<BulletScript>().Init(spawPoint.forward, speed);
