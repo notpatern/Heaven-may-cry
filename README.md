@@ -1,6 +1,6 @@
 Heaven may cry
 --------------
-Disclaimer: the game is currently in super mega early developement.
+Disclaimer: the game is currently in super mega early developement. It's my dream project but will be in SMED for a really really long time.
 --------------
 
 Heaven may cry is a retro shooter greatly inpired by the original Doom game and Ultrakill.
